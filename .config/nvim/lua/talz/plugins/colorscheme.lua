@@ -1,14 +1,8 @@
 return {
-	{ "gruvbox-community/gruvbox" },
-	{
-		"navarasu/onedark.nvim",
-		config = function()
-			require("onedark").setup({ style = "darker" })
-			pcall(vim.cmd, "colorscheme onedark")
-		end,
-	},
-	{ "KeitaNakamura/neodark.vim" },
-	{ "folke/tokyonight.nvim" },
-	{ "EdenEast/nightfox.nvim" },
-	{ "catppuccin/nvim", name = "catppuccin" },
+	"ribru17/bamboo.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.cmd("colorscheme bamboo")
+	end,
 }
