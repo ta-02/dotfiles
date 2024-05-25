@@ -14,6 +14,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Save and quit with leader
 keymap.set("n", "<leader>w", ":w<cr>", { noremap = true, silent = true })
+keymap.set("n", "<leader>cc", ":xa<cr>", { noremap = true, silent = true })
 keymap.set("n", "<leader>q", ":bdelete<cr>", { noremap = true, silent = true })
 
 -- delete single character without copying into register
