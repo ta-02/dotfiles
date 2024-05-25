@@ -1,5 +1,5 @@
 import =[
-  "~/.config/alacritty/themes/themes/bamboo.toml"
+  "~/.config/alacritty/themes/themes/one_dark.toml"
 ]
 
 [env]
@@ -7,7 +7,7 @@ TERM = "xterm-256color"
 
 [window]
 padding.x = 10
-padding.y = 10
+padding.y = 10 
 
 decorations = "Buttonless"
 
@@ -16,4 +16,4 @@ option_as_alt = "Both"
 [font]
 normal.family = "Operator-Caska"
 
-size = 20 
+size = 22 
