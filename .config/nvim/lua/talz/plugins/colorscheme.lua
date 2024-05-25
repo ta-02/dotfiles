@@ -1,5 +1,4 @@
 return {
-	"ribru17/bamboo.nvim",
 	"navarasu/onedark.nvim",
 	lazy = false,
 	priority = 1000,
