@@ -9,10 +9,12 @@ end, { expr = true, noremap = true })
 -- exit insert
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
+-- clear highlights
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+
 -- Save and quit with leader
 keymap.set("n", "<leader>w", ":w<cr>", { noremap = true, silent = true })
-keymap.set("n", "<leader>q", ":q<cr>", { noremap = true, silent = true })
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>q", ":bdelete<cr>", { noremap = true, silent = true })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
