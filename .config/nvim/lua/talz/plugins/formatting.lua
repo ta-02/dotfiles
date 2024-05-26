@@ -19,7 +19,8 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
-				python = { "isort", "black" },
+				python = { "isort", "blue" },
+				cpp = { "clang-format" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
