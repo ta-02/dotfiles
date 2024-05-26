@@ -15,6 +15,6 @@ decorations = "Buttonless"
 option_as_alt = "Both"
 
 [font]
-normal.family = "Operator-Caska"
+normal.family = "FiraCode Nerd Font"
 
 size = 22 
