@@ -10,17 +10,21 @@ return {
 
 			-- Color table for highlights
 			local colors = {
-				bg = "#101019",
-				fg = "#cdd6f4",
-				yellow = "#f9e2af",
-				cyan = "#89dceb",
+				bg = "#0d1117",
+				fg = "#b3b1ad",
+
+				black = "#484f58",
+				red = "#ff7b72",
+				green = "#3fb950",
+				yellow = "#d29922",
+				blue = "#58a6ff",
+				magenta = "#bc8cff",
+				cyan = "#39c5cf",
+				white = "#b1bac4",
+
 				darkblue = "#45475a",
-				green = "#a6e3a1",
 				orange = "#fab387",
 				violet = "#cba6f7",
-				magenta = "#f5c2e7",
-				blue = "#89b4fa",
-				red = "#f38ba8",
 			}
 
 			local conditions = {
