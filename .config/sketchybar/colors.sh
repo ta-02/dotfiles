@@ -11,7 +11,7 @@ export WHITE=0xffffffff
 # -- Gray Scheme --
 export BAR_COLOR=WHITE
 export ITEM_BG_COLOR=WHITE
-export ACCENT_COLOR=BLACK
+export ACCENT_COLOR=WHITE
 
 # -- Purple Scheme --
 # export BAR_COLOR=0xff140c42
