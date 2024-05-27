@@ -13,14 +13,14 @@ return {
 				bg = "#0d1117",
 				fg = "#b3b1ad",
 
-				black = "#484f58",
-				red = "#ff7b72",
-				green = "#3fb950",
-				yellow = "#d29922",
-				blue = "#58a6ff",
-				magenta = "#bc8cff",
-				cyan = "#39c5cf",
-				white = "#b1bac4",
+				black = "#475258",
+				red = "#e67e80",
+				green = "#a7c080",
+				yellow = "#dbbc7f",
+				blue = "#7fbbb3",
+				magenta = "#d699b6",
+				cyan = "#83c092",
+				white = "#d3c6aa",
 
 				darkblue = "#45475a",
 				orange = "#fab387",
@@ -129,17 +129,17 @@ return {
 				padding = { right = 1 },
 			})
 
-			ins_left({
-				-- filesize component
-				"filesize",
-				cond = conditions.buffer_not_empty,
-			})
+			-- ins_left({
+			-- 	-- filesize component
+			-- 	"filesize",
+			-- 	cond = conditions.buffer_not_empty,
+			-- })
 
-			ins_left({
-				"filename",
-				cond = conditions.buffer_not_empty,
-				color = { fg = colors.magenta, gui = "bold" },
-			})
+			-- ins_left({
+			-- 	"filename",
+			-- 	cond = conditions.buffer_not_empty,
+			-- 	color = { fg = colors.magenta, gui = "bold" },
+			-- })
 
 			ins_left({ "location" })
 
@@ -186,19 +186,21 @@ return {
 			})
 
 			-- Add components to right sections
-			ins_right({
-				"o:encoding", -- option component same as &encoding in viml
-				fmt = string.upper, -- I'm not sure why it's upper case either ;)
-				cond = conditions.hide_in_width,
-				color = { fg = colors.green, gui = "bold" },
-			})
+			-- ins_right({
+			-- 	"o:encoding", -- option component same as &encoding in viml
+			-- 	fmt = string.upper, -- I'm not sure why it's upper case either ;)
+			-- 	cond = conditions.hide_in_width,
+			-- 	color = { fg = colors.green, gui = "bold" },
+			-- })
 
 			ins_right({
 				"fileformat",
 				fmt = string.upper,
-				icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+				icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
 				color = { fg = colors.green, gui = "bold" },
 			})
+
+			ins_right({ "filetypes" })
 
 			ins_right({
 				"branch",
