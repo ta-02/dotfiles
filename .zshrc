@@ -65,3 +65,4 @@ alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
