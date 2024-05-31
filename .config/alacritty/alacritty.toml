@@ -1,5 +1,5 @@
 import =[
-  "~/.config/alacritty/themes/themes/solariezed-osaka.toml"
+  "~/.config/alacritty/themes/themes/onenord.toml"
 ]
 
 [env]

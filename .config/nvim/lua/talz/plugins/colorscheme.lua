@@ -1,41 +1,34 @@
 return {
-	"craftzdog/solarized-osaka.nvim",
+	"rmehri01/onenord.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("solarized-osaka").setup({
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			transparent = true, -- Enable this to disable setting the background color
-			terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
+		require("onenord").setup({
+			theme = "dark", -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+			borders = true, -- Split window borders
+			fade_nc = false, -- Fade non-current windows, making them more distinguishable
+			-- Style that is applied to various groups: see `highlight-args` for options
 			styles = {
-				-- Style to be applied to different syntax groups
-				-- Value is any valid attr-list value for `:help nvim_set_hl`
-				comments = { italic = true },
-				keywords = { italic = true },
-				functions = {},
-				variables = {},
-				-- Background styles. Can be "dark", "transparent" or "normal"
-				sidebars = "transparent", -- style for sidebars, see below
-				floats = "transparent", -- style for floating windows
+				comments = "italic",
+				strings = "italic",
+				keywords = "italic",
+				functions = "NONE",
+				variables = "NONE",
+				diagnostics = "underline",
 			},
-			sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-			day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-			hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-			dim_inactive = false, -- dims inactive windows
-			lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
-
-			--- You can override specific color groups to use other groups or a hex color
-			--- function will be called with a ColorScheme table
-			---@param colors ColorScheme
-			on_colors = function(colors) end,
-
-			--- You can override specific highlights to use other groups or a hex color
-			--- function will be called with a Highlights and ColorScheme table
-			---@param highlights Highlights
-			---@param colors ColorScheme
-			on_highlights = function(highlights, colors) end,
+			disable = {
+				background = true, -- Disable setting the background color
+				float_background = true, -- Disable setting the background color for floating windows
+				cursorline = false, -- Disable the cursorline
+				eob_lines = true, -- Hide the end-of-buffer lines
+			},
+			-- Inverse highlight for different groups
+			inverse = {
+				match_paren = false,
+			},
+			custom_highlights = {}, -- Overwrite default highlight groups
+			custom_colors = {}, -- Overwrite default colors
 		})
-		vim.cmd("colorscheme solarized-osaka")
+		vim.cmd("colorscheme onenord")
 	end,
 }
