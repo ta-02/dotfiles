@@ -17,7 +17,7 @@ return {
 				diagnostics = "underline",
 			},
 			disable = {
-				background = true, -- Disable setting the background color
+				background = false, -- Disable setting the background color
 				float_background = true, -- Disable setting the background color for floating windows
 				cursorline = false, -- Disable the cursorline
 				eob_lines = true, -- Hide the end-of-buffer lines
