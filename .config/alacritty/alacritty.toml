@@ -1,5 +1,5 @@
 import =[
-  "~/.config/alacritty/themes/themes/onenord.toml"
+  "~/.config/alacritty/themes/themes/lackluster.toml"
 ]
 
 [env]
@@ -17,7 +17,7 @@ option_as_alt = "Both"
 size = 22
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "MesloLGS Nerd Font Mono"
 
 [font.italic]
 family = "Operator-caska"
