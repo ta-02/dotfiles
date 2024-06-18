@@ -17,6 +17,15 @@ export FZF_ALT_C_COMMAND="fd --type=d  --strip-cwd-prefix --exclude .git"
 # -- Vi Binds -- 
 bindkey -v
 
+# Yank to the system clipboard
+function vi-yank-xclip {
+    zle vi-yank
+   echo "$CUTBUFFER" | pbcopy -i
+}
+
+zle -N vi-yank-xclip
+bindkey -M vicmd 'y' vi-yank-xclip
+
 # -- Use fd (https://github.com/sharkdp/fd) for listing path candidates. --
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
@@ -69,3 +78,5 @@ alias ls="eza --icons=always"
 eval "$(zoxide init zsh)"
 alias cd="z"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
+source ~/fzf-git.sh/fzf-git.sh
