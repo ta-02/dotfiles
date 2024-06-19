@@ -13,16 +13,29 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 export FZF_DEFAULT_COMMAND="fd  --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d  --strip-cwd-prefix --exclude .git"
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
 
 # -- Vi Binds -- 
 bindkey -v
 
-# Yank to the system clipboard
 function vi-yank-xclip {
     zle vi-yank
    echo "$CUTBUFFER" | pbcopy -i
 }
-
 zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
 
@@ -80,3 +93,4 @@ alias cd="z"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 source ~/fzf-git.sh/fzf-git.sh
+source "$HOME/.zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh"

@@ -1,5 +1,5 @@
 return {
-	-- "rmehri01/onenord.nvim",
+
 	"slugbyte/lackluster.nvim",
 	lazy = false,
 	priority = 1000,
