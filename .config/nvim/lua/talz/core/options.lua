@@ -9,6 +9,8 @@ opt.expandtab = true
 opt.autoindent = true
 opt.wrap = false
 
+opt.statusline = "[%<%.20f][%{&fenc==''?&enc:&fenc}]%y%m%r%h%=%([Line: %l Column: %c %P]%)"
+
 opt.ignorecase = true
 opt.smartcase = true
 
