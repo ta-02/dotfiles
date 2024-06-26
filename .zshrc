@@ -1,4 +1,6 @@
-eval "$(starship init zsh)"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+source $ZSH/oh-my-zsh.sh
 
 # -- Use FD instead of FZF--
 export FZF_DEFAULT_COMMAND="fd  --strip-cwd-prefix --exclude .git"
