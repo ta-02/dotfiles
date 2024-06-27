@@ -1,1 +1,6 @@
-dotfiles for nvim, alacritty, tmux, etc..
+# Dotfiles
+
+## Config for
+- Nvim
+- Alacritty,
+- Tmux
