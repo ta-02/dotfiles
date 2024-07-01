@@ -17,5 +17,5 @@ option_as_alt = "Both"
 size = 22
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "Monaco Nerd Font"
 
