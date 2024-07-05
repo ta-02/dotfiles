@@ -11,11 +11,10 @@ padding.y = 10
 opacity = 0.8
 blur = true
 decorations = "buttonless"
-option_as_alt = "Both"
 
 [font]
-size = 22
+size = 24
 
 [font.normal]
-family = "Monaco Nerd Font"
+family = "MesloLGS Nerd Font Mono"
 
