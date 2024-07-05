@@ -20,6 +20,7 @@ alias python="python3"
 alias py="python3"
 alias pip="pip3"
 alias ls="eza --icons=always"
+
 alias cd="z"
 
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --exclude .git"
@@ -70,9 +71,10 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
 [ -s "/Users/talal/.bun/_bun" ] && source "/Users/talal/.bun/_bun"
+
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
