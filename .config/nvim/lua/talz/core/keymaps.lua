@@ -33,3 +33,7 @@ keymap.set("n", "H", ":bprevious<CR>", { noremap = true, silent = true, desc = "
 -- rezise windows
 keymap.set("n", "<leader>+", "<Cmd>vertical resize +5<CR>", { desc = "Resize window +5" })
 keymap.set("n", "<leader>-", "<Cmd>vertical resize -5<CR>", { desc = "Resize window -5" })
+
+-- move lines up and down in visual mode
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line down" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line up" })
