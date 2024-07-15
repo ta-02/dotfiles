@@ -14,7 +14,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Save and quit with leader
 keymap.set("n", "<leader>w", ":w<cr>", { noremap = true, silent = true })
-keymap.set("n", "<leader>cc", ":xa<cr>", { noremap = true, silent = true })
+keymap.set("n", "<leader>Q", ":xa<cr>", { noremap = true, silent = true })
 keymap.set("n", "<leader>q", ":bdelete<cr>", { noremap = true, silent = true })
 
 -- delete single character without copying into register
@@ -37,3 +37,11 @@ keymap.set("n", "<leader>-", "<Cmd>vertical resize -5<CR>", { desc = "Resize win
 -- move lines up and down in visual mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line up" })
+
+-- Show diagnostics in a floating window
+keymap.set(
+	"n",
+	"<leader>h",
+	vim.diagnostic.open_float,
+	{ noremap = true, silent = true, desc = "Show diagnostics in floating window" }
+)
