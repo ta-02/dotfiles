@@ -4,7 +4,6 @@ return {
 	config = function()
 		local nvimtree = require("nvim-tree")
 
-		-- recommended settings from nvim-tree documentation
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 		vim.opt.termguicolors = true
@@ -27,17 +26,7 @@ return {
 			filters = { dotfiles = false, custom = { "^.DS_Store$", "^\\.git$" } },
 			git = { enable = true, ignore = false, timeout = 500 },
 		})
-		-- set keymaps
-		local keymap = vim.keymap -- for conciseness
-		--
+		local keymap = vim.keymap
 		keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
-		-- keymap.set(
-		-- 	"n",
-		-- 	"<leader>e",
-		-- 	"<cmd>NvimTreeFindFileToggle<CR>",
-		-- 	{ desc = "Toggle file explorer on current file" }
-		-- ) -- toggle file explorer on current file
-		-- keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
-		-- keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
 	end,
 }

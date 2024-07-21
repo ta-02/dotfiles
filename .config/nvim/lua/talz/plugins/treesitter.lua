@@ -37,7 +37,6 @@ return {
 				"vimdoc",
 				"c",
 			},
-			-- Configure incremental selection
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -48,7 +47,6 @@ return {
 				},
 			},
 		})
-		-- Setup autotags
 		require("nvim-ts-autotag").setup()
 	end,
 }
