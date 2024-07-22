@@ -28,10 +28,3 @@ keymap.set("n", "<leader>-", "<Cmd>vertical resize -5<CR>", { desc = "Resize win
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = "Move line down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = "Move line up" })
-
-keymap.set(
-	"n",
-	"<leader>h",
-	vim.diagnostic.open_float,
-	{ noremap = true, silent = true, desc = "Show diagnostics in floating window" }
-)
