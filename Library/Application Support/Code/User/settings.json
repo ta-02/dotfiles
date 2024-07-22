@@ -26,9 +26,7 @@
   "breadcrumbs.enabled": false,
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
-  // "workbench.editor.editorActionsLocation": "hidden",
 
-  // "workbench.activityBar.location": "hidden",
   "workbench.sideBar.location": "right",
 
   "window.zoomLevel": 0.5,
