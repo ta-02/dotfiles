@@ -7,7 +7,6 @@ return {
 	},
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
-
 		treesitter.setup({
 			highlight = {
 				enable = true,
@@ -19,6 +18,7 @@ return {
 				"json",
 				"javascript",
 				"typescript",
+				"jsx",
 				"tsx",
 				"yaml",
 				"html",
@@ -26,7 +26,6 @@ return {
 				"prisma",
 				"markdown",
 				"markdown_inline",
-				"svelte",
 				"graphql",
 				"bash",
 				"lua",
@@ -35,6 +34,8 @@ return {
 				"gitignore",
 				"query",
 				"vimdoc",
+				"go",
+				"python",
 				"c",
 			},
 			incremental_selection = {
