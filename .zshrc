@@ -25,7 +25,6 @@ alias py="python3"
 alias pip="pip3"
 alias ls="eza --icons=always"
 alias lg='lazygit'
-
 alias cd="z"
 
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --exclude .git"
