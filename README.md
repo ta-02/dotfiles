@@ -1,11 +1,11 @@
 # Dotfiles
 
-Dotfiles for things below
+Dotfiles for
 
-- [Neovim]
-- [VSCode]
-- [Alacritty]
-- [Tmux]
-- [Zsh]
-- [shkd]
-- [yabai]
+- Neovim
+- VSCode
+- Alacritty
+- Tmux
+- Zsh
+- shkd
+- yabai
