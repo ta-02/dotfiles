@@ -70,8 +70,6 @@ source "$HOME/.zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh"
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 export GOPATH=$(go env GOPATH)

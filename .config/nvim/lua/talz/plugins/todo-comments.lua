@@ -4,7 +4,6 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local todo_comments = require("todo-comments")
-
 		local keymap = vim.keymap
 
 		keymap.set("n", "]t", function()

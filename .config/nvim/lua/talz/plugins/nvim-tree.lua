@@ -12,11 +12,6 @@ return {
 				width = 35,
 				relativenumber = true,
 			},
-			renderer = {
-				indent_markers = {
-					enable = true,
-				},
-			},
 			diagnostics = {
 				enable = true,
 			},
@@ -25,6 +20,6 @@ return {
 			git = { enable = true, ignore = false, timeout = 500 },
 		})
 		local keymap = vim.keymap
-		keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+		keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 	end,
 }
