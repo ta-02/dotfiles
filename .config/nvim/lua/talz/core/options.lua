@@ -17,8 +17,6 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
-opt.statusline = [[%<%f %h%m%r %y%=%{v:register} %-14.(%l,%c%V%) %P]]
-
 opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
 opt.splitright = true
