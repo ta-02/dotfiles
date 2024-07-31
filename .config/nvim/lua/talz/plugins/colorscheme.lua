@@ -1,5 +1,5 @@
 return {
-	-- "vague2k/vague.nvim",
+	--"vague2k/vague.nvim",
 	"cdmill/neomodern.nvim",
 	lazy = false,
 	priority = 1000,

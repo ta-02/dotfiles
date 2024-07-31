@@ -1,5 +1,5 @@
 import =[
-"~/.config/alacritty/themes/themes/roseprime.toml"
+"~/.config/alacritty/themes/roseprime.toml"
 ]
 
 [env]
@@ -16,4 +16,4 @@ decorations = "buttonless"
 size = 24
 
 [font.normal]
-family = "MesloLGS Nerd Font Mono"
+family = "MesloLGS Nerd Font Mono" 
