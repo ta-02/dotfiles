@@ -1,16 +1,13 @@
-import =[
-"~/.config/alacritty/themes/roseprime.toml"
-]
-
 [env]
 TERM = "xterm-256color"
+
+[colors.primary]
+background = '#000000' 
 
 [window]
 padding.x = 15
 padding.y = 15 
-opacity = 0.95
-blur = true
-decorations = "buttonless"
+decorations = "none" # or 'buttonless'
 
 [font]
 size = 24
