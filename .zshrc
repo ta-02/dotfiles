@@ -23,7 +23,7 @@ alias tn="tmux new -s"
 alias python="python3"
 alias py="python3"
 alias pip="pip3"
-alias ls="eza --icons=always"
+alias ls="eza"
 alias lg='lazygit'
 alias cd="z"
 
