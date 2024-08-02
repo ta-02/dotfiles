@@ -2,7 +2,7 @@
 TERM = "xterm-256color"
 
 [colors.primary]
-background = '#000000' 
+background = '#0C0B00'
 
 [window]
 padding.x = 15
