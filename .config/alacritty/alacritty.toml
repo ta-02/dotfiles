@@ -13,4 +13,5 @@ decorations = "none" # or 'buttonless'
 size = 24
 
 [font.normal]
-family = "MesloLGS Nerd Font Mono" 
+# family = "MesloLGS Nerd Font Mono" 
+family = "FiraCode Nerd Font Mono" 
