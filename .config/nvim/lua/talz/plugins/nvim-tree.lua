@@ -15,6 +15,18 @@ return {
 			diagnostics = {
 				enable = true,
 			},
+			renderer = {
+				icons = {
+					web_devicons = {
+						file = {
+							color = false,
+						},
+						folder = {
+							color = false,
+						},
+					},
+				},
+			},
 			actions = { open_file = { quit_on_open = true } },
 			filters = { dotfiles = false, custom = { "^.DS_Store$", "^\\.git$" } },
 			git = { enable = true, ignore = false, timeout = 500 },
