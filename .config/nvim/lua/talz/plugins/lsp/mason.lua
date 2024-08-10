@@ -9,15 +9,7 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local mason_tool_installer = require("mason-tool-installer")
 
-		mason.setup({
-			ui = {
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗",
-				},
-			},
-		})
+		mason.setup()
 
 		mason_lspconfig.setup({
 			ensure_installed = {
@@ -26,11 +18,11 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
-				"graphql",
 				"emmet_ls",
 				"prismals",
 				"gopls",
 				"clangd",
+				"rust_analyzer",
 				"pyright",
 			},
 		})

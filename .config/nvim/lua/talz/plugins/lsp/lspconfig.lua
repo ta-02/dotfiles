@@ -58,6 +58,16 @@ return {
 			end,
 		})
 
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+
+		vim.lsp.handlers["textDocument/signatureHelp"] =
+			vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+		vim.diagnostic.config({
+			float = {
+				border = "rounded",
+			},
+		})
+
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		mason_lspconfig.setup_handlers({
@@ -66,12 +76,7 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["graphql"] = function()
-				lspconfig["graphql"].setup({
-					capabilities = capabilities,
-					filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-				})
-			end,
+
 			["tailwindcss"] = function()
 				lspconfig["tailwindcss"].setup({
 					capabilities = capabilities,
@@ -87,6 +92,7 @@ return {
 					},
 				})
 			end,
+
 			["emmet_ls"] = function()
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
@@ -102,6 +108,7 @@ return {
 					},
 				})
 			end,
+
 			["lua_ls"] = function()
 				lspconfig["lua_ls"].setup({
 					capabilities = capabilities,

@@ -53,9 +53,15 @@ return {
 			window = {
 				completion = {
 					border = "rounded",
+					winhighlight = "Normal:Normal,CursorLine:CursorLine,Search:Search",
+					col_offset = 0,
+					side_padding = 1,
 				},
 				documentation = {
 					border = "rounded",
+					winhighlight = "Normal:Normal,CursorLine:CursorLine,Search:Search",
+					col_offset = 0,
+					side_padding = 1,
 				},
 			},
 		})
