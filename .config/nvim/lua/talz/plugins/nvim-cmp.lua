@@ -38,19 +38,25 @@ return {
 				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 			}),
-
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
-
 			formatting = {
 				format = lspkind.cmp_format({
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
+			},
+			window = {
+				completion = {
+					border = "rounded",
+				},
+				documentation = {
+					border = "rounded",
+				},
 			},
 		})
 	end,
