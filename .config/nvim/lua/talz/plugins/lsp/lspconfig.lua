@@ -64,7 +64,10 @@ return {
 			vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 		vim.diagnostic.config({
 			float = {
+				style = "minimal",
 				border = "rounded",
+				header = "",
+				prefix = "",
 			},
 		})
 

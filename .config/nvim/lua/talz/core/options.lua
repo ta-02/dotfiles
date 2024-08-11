@@ -5,13 +5,16 @@ opt.number = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
+
+opt.smartindent = true
 opt.autoindent = true
+
 opt.wrap = false
 
 opt.ignorecase = true
 opt.smartcase = true
 
-opt.termguicolors = false
+opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
