@@ -10,11 +10,11 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
-bindkey -v
+bindkey -v 
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-alias n="nvim"
+alias vim="nvim"
 alias t="tmux"
 alias tk="tmux kill-session -t"
 alias tl="tmux list-sessions"
@@ -66,8 +66,8 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/fzf-git.sh/fzf-git.sh
 source "$HOME/.zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh"
+source ~/fzf-git.sh/fzf-git.sh
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export GOPATH=$(go env GOPATH)

@@ -1,11 +1,10 @@
-# Dotfiles
+# dotfiles
 
-Dotfiles for
+dotfiles for
 
-- Neovim
-- VSCode
-- Alacritty
-- Tmux
-- Zsh
-- shkd
-- yabai
+- neovim
+- vsCode
+- alacritty
+- tmux
+- zsh
+- aerospace

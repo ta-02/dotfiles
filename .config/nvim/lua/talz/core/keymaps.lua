@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+
 local keymap = vim.keymap
 
 keymap.set("n", "i", function()
@@ -10,8 +11,8 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "<leader>w", ":w<cr>", { noremap = true, silent = true })
-keymap.set("n", "<leader>Q", ":xa<cr>", { noremap = true, silent = true })
 keymap.set("n", "<leader>q", ":bdelete<cr>", { noremap = true, silent = true })
+keymap.set("n", "<leader>Q", ":xa<cr>", { noremap = true, silent = true })
 
 keymap.set("n", "x", '"_x')
 

@@ -15,8 +15,6 @@
   "editor.scrollbar.vertical": "hidden",
   "update.showReleaseNotes": false,
   "zenMode.hideLineNumbers": false,
-
-  "workbench.colorTheme": "poimandres",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "apc.font.family": "FiraCode Nerd Font Mono",
   "editor.fontSize": 20,
