@@ -3,14 +3,10 @@ return {
 	name = "rose-pine",
 	lazy = false,
 	priority = 1000,
+	commit = "29c6a52b020959c914a1b22c79c08eb9f6f6b343",
 	config = function()
 		local transparent = true
 		require("rose-pine").setup({
-			groups = {
-				border = "#333333",
-				link = "#333333",
-				panel = "#333333",
-			},
 			styles = {
 				transparency = transparent,
 			},
