@@ -3,7 +3,7 @@
 dotfiles for
 
 - neovim
-- vsCode
+- vscode
 - alacritty
 - tmux
 - zsh
