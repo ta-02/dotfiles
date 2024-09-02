@@ -52,13 +52,13 @@ return {
 			},
 			window = {
 				completion = {
-					border = "rounded",
+					border = "single",
 					winhighlight = "Normal:Normal,CursorLine:CursorLine,Search:Search",
 					col_offset = 0,
 					side_padding = 1,
 				},
 				documentation = {
-					border = "rounded",
+					border = "single",
 					winhighlight = "Normal:Normal,CursorLine:CursorLine,Search:Search",
 					col_offset = 0,
 					side_padding = 1,

@@ -1,6 +1,9 @@
 [env]
 TERM="xterm-256color"
 
+[colors.primary]
+background = '#0D0C00'
+
 [window]
 padding.x = 15
 padding.y = 15 
