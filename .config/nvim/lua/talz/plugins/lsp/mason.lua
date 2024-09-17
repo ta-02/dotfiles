@@ -23,7 +23,6 @@ return {
 				"gopls",
 				"clangd",
 				"rust_analyzer",
-				"pyright",
 			},
 		})
 
