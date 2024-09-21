@@ -32,8 +32,8 @@ return {
 				operators = false,
 				folds = false,
 			},
-			undercurl = true,
-			underline = true,
+			undercurl = false,
+			underline = false,
 		})
 		vim.cmd.colorscheme("gruber-darker")
 		ColorMyPencils()
