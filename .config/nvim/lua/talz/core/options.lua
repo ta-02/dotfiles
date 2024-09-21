@@ -26,5 +26,5 @@ opt.swapfile = false
 
 opt.isfname:append("@-@")
 opt.scrolloff = 8
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 opt.conceallevel = 2
