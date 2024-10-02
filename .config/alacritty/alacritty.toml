@@ -10,7 +10,8 @@ decorations = "none"
 hide_when_typing = true
 
 [font]
-size = 30
+size = 31
 
 [font.normal]
 family = "Iosevka Nerd Font Mono"
+

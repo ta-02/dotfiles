@@ -1,6 +1,14 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-source $ZSH/oh-my-zsh.sh
+function git_branch_name() {
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]]; then
+    return
+  else
+    echo "[$branch]"
+  fi
+}
+
+setopt prompt_subst
+PROMPT='%1~$(git_branch_name)%# '
 
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -15,11 +23,6 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 alias vim="nvim"
-alias t="tmux"
-alias tk="tmux kill-session -t"
-alias tl="tmux list-sessions"
-alias ta="tmux attach -t"
-alias tn="tmux new -s"
 alias python="python3"
 alias py="python3"
 alias pip="pip3"
@@ -80,3 +83,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

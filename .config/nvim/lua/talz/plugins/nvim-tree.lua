@@ -17,6 +17,16 @@ return {
 			},
 			renderer = {
 				icons = {
+					show = {
+						file = false,
+						folder = false,
+						folder_arrow = true,
+						git = true,
+						modified = true,
+						hidden = false,
+						diagnostics = true,
+						bookmarks = true,
+					},
 					web_devicons = {
 						file = {
 							color = false,
