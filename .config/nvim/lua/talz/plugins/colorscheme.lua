@@ -37,9 +37,5 @@ return {
 		})
 		vim.cmd.colorscheme("gruber-darker")
 		ColorMyPencils()
-		-- require("vague").setup({
-		-- 	transparent = transparent,
-		-- })
-		-- vim.cmd.colorscheme("vague")
 	end,
 }

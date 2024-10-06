@@ -1,6 +1,46 @@
 [env]
 TERM="xterm-256color"
 
+[colors.primary]
+background = '#181818'
+foreground = '#e4e4e4'
+
+[colors.cursor]
+text = '#e4e4e4'
+cursor = '#ffdd33'
+
+[colors.vi_mode_cursor]
+text = '#e4e4e4'
+cursor = '#ffdd33'
+
+[colors.selection]
+text = '#e4e4e4'
+background = '#ffffff'
+
+[colors.normal]
+black = '#181818'
+red = '#f43841'
+green = '#73d936'
+yellow = '#ffdd33'
+blue = '#96a6c8'
+magenta = '#9e95c7'
+cyan = '#95a99f'
+white = '#e4e4e4'
+
+[colors.bright]
+black = '#52494e'
+red = '#ff4f58'
+green = '#73d936'
+yellow = '#ffdd33'
+blue = '#52494e'
+magenta = '#9e95c7'
+cyan = '#95a99f'
+white = '#f5f5f5'
+
+[colors.hints]
+start = { foreground = '#52494e', background = '#181818' }
+end = { foreground = '#f5f5f5', background = '#181818' }
+
 [window]
 padding.x = 15
 padding.y = 15 

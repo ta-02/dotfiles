@@ -1,15 +1,3 @@
-function git_branch_name() {
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]]; then
-    return
-  else
-    echo "[$branch]"
-  fi
-}
-
-setopt prompt_subst
-PROMPT='%1~$(git_branch_name)%# '
-
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
@@ -67,6 +55,7 @@ bindkey -M vicmd 'y' vi-yank-xclip
 export PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 
+source ~/prompt.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$HOME/.zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh"
