@@ -1,3 +1,18 @@
+function git_branch_name() {
+  local branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  local status_color="%F{green}" # Default to green for a clean branch
+  if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
+    status_color="%F{red}" # Change to red if there are uncommitted changes
+  fi
+
+  if [[ -n $branch ]]; then
+    echo "${status_color}[$branch]%f"
+  fi
+}
+
+setopt prompt_subst
+PROMPT='%1~$(git_branch_name)λ '
+
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
