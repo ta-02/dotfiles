@@ -32,6 +32,8 @@ alias pip="pip3"
 alias ls="eza"
 alias lg='lazygit'
 alias cd="z"
+alias g++="g++ -std=c++23"
+alias c++="c++ -std=c++23"
 
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
