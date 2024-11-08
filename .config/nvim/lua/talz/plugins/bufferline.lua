@@ -11,7 +11,7 @@ return {
 					bufferline.style_preset.no_bold,
 				},
 				mode = "buffers",
-				separator_style = { " ", "" },
+				-- separator_style = { " ", "" },
 				indicator = {
 					icon = "",
 					style = "none",

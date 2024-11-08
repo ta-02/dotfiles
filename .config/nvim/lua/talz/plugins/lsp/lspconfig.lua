@@ -58,20 +58,6 @@ return {
 			end,
 		})
 
-		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
-
-		vim.lsp.handlers["textDocument/signatureHelp"] =
-			vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
-
-		vim.diagnostic.config({
-			float = {
-				style = "minimal",
-				border = "single", -- Change border style here
-				header = "",
-				prefix = "",
-			},
-		})
-
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		mason_lspconfig.setup_handlers({
