@@ -24,6 +24,7 @@ return {
 			},
 			pickers = {
 				find_files = {
+					disable_devicons = true,
 					theme = "dropdown",
 				},
 			},

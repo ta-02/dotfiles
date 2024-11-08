@@ -21,11 +21,11 @@ return {
 						file = false,
 						folder = false,
 						folder_arrow = true,
-						git = true,
-						modified = true,
+						git = false,
+						modified = false,
 						hidden = false,
-						diagnostics = true,
-						bookmarks = true,
+						diagnostics = false,
+						bookmarks = false,
 					},
 					web_devicons = {
 						file = {
