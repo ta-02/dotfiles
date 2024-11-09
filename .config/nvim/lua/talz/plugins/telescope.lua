@@ -23,7 +23,19 @@ return {
 				},
 			},
 			pickers = {
+				oldfiles = {
+					disable_devicons = true,
+					theme = "dropdown",
+				},
 				find_files = {
+					disable_devicons = true,
+					theme = "dropdown",
+				},
+				live_grep = {
+					disable_devicons = true,
+					theme = "dropdown",
+				},
+				grep_string = {
 					disable_devicons = true,
 					theme = "dropdown",
 				},

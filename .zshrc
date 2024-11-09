@@ -1,17 +1,25 @@
-function git_branch_name() {
-  local branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  local status_color="%F{green}" # Default to green for a clean branch
-  if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
-    status_color="%F{red}" # Change to red if there are uncommitted changes
+git_prompt_info() {
+  local dirstatus=" OK"
+  local dirty="%{$fg[red]%} X%{$reset_color%}"
+
+  if [[ ! -z $(git status --porcelain 2> /dev/null | tail -n1) ]]; then
+    dirstatus=$dirty
   fi
 
-  if [[ -n $branch ]]; then
-    echo "${status_color}[$branch]%f"
-  fi
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo " %{$fg[green]%}${ref#refs/heads/}$dirstatus%{$reset_color%}"
 }
 
+local dir_info_color="%F{white}"
+
+local dir_info="%{$dir_info_color%}%(5~|%-1~/.../%2~|%4~)%{$reset_color%}"
+local promptnormal="%% %{$reset_color%}"
+local promptjobs="%{$fg[red]%}φ %{$reset_color%}"
+
+
 setopt prompt_subst
-PROMPT='%1~$(git_branch_name)λ '
+PROMPT='${dir_info}$(git_prompt_info) %(1j.$promptjobs.$promptnormal)'
 
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -29,8 +37,8 @@ alias vim="nvim"
 alias python="python3"
 alias py="python3"
 alias pip="pip3"
-alias ls="eza"
 alias lg='lazygit'
+alias ls="eza"
 alias cd="z"
 alias g++="g++ -std=c++23"
 alias c++="c++ -std=c++23"
