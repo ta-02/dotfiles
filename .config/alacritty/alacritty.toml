@@ -6,7 +6,7 @@ background = '#0E0E0E'
 
 [window]
 padding.x = 12
-padding.y = 12 
+padding.y = 10 
 decorations = "none" 
 
 [mouse]

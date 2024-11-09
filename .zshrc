@@ -14,7 +14,7 @@ git_prompt_info() {
 local dir_info_color="%F{white}"
 
 local dir_info="%{$dir_info_color%}%(5~|%-1~/.../%2~|%4~)%{$reset_color%}"
-local promptnormal="%% %{$reset_color%}"
+local promptnormal="φ %{$reset_color%}"
 local promptjobs="%{$fg[red]%}φ %{$reset_color%}"
 
 
