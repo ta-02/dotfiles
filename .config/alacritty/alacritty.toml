@@ -2,15 +2,19 @@
 TERM="xterm-256color"
 
 [colors.primary]
-background = '#0E0E0E'
+# background = "#181818" # For Grub
+background = "#3F3F3F"   # For Zenburn
 
 [window]
 padding.x = 12
-padding.y = 10 
+padding.y = 12 
 decorations = "none" 
 
 [mouse]
 hide_when_typing = true
+
+[cursor]
+style.blinking = "On"
 
 [font]
 size = 31

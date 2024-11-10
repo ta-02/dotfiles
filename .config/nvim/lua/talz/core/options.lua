@@ -2,6 +2,7 @@ local opt = vim.opt
 
 opt.relativenumber = true
 opt.nu = true
+opt.guicursor = "n:blinkon1"
 
 opt.softtabstop = 2
 opt.tabstop = 2
