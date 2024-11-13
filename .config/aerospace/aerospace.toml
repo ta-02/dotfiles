@@ -1,5 +1,5 @@
 after-login-command = []
-after-startup-command = ['layout v_tiles']
+after-startup-command = ['layout h_tiles']
 start-at-login = true 
 
 enable-normalization-flatten-containers = true
