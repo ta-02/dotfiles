@@ -1,29 +1,26 @@
-local opt = vim.opt
+vim.opt.relativenumber = true
+vim.opt.nu = true
+vim.opt.guicursor = "n:blinkon1"
 
-opt.relativenumber = true
-opt.nu = true
-opt.guicursor = "n:blinkon1"
+vim.opt.softtabstop = 2
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 
-opt.softtabstop = 2
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.wrap = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-opt.smartindent = true
-opt.autoindent = true
-opt.wrap = false
-opt.ignorecase = true
-opt.smartcase = true
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
 
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
+vim.opt.backspace = "indent,eol,start"
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.swapfile = false
 
-opt.backspace = "indent,eol,start"
-opt.clipboard:append("unnamedplus")
-opt.splitright = true
-opt.splitbelow = true
-opt.swapfile = false
-
-opt.isfname:append("@-@")
-opt.scrolloff = 8
+vim.opt.isfname:append("@-@")
+vim.opt.scrolloff = 8

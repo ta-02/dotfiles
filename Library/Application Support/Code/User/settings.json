@@ -15,8 +15,8 @@
   "editor.scrollbar.vertical": "hidden",
   "update.showReleaseNotes": false,
   "zenMode.hideLineNumbers": false,
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
-  "apc.font.family": "FiraCode Nerd Font Mono",
+  "editor.fontFamily": "Iosevka Nerd Font Mono",
+  "apc.font.family": "Iosevka Nerd Font Mono",
   "editor.fontSize": 20,
 
   "editor.cursorBlinking": "smooth",
@@ -151,5 +151,6 @@
       "before": ["K"],
       "commands": ["editor.action.moveLinesUpAction"]
     }
-  ]
+  ],
+  "workbench.colorTheme": "Zenburn"
 }

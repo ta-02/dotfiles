@@ -1,5 +1,5 @@
 after-login-command = []
-after-startup-command = []
+after-startup-command = ['layout v_tiles']
 start-at-login = true 
 
 enable-normalization-flatten-containers = true
@@ -8,18 +8,16 @@ accordion-padding = 10
 
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
-
 key-mapping.preset = 'qwerty'
-
 on-focus-changed = "move-mouse window-lazy-center"
 
 [gaps]
-inner.horizontal = 10
-inner.vertical =   10
-outer.left =       10
-outer.bottom =     10
-outer.top =        10
-outer.right =      10
+inner.horizontal = 8
+inner.vertical =   8
+outer.left =       8
+outer.bottom =     8
+outer.top =        8
+outer.right =      8
 
 [mode.main.binding]
 alt-slash = 'layout tiles horizontal vertical'
@@ -66,3 +64,11 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = 'move-node-to-workspace 2' 
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 1' 
