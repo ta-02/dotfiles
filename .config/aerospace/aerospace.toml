@@ -1,5 +1,5 @@
 after-login-command = []
-after-startup-command = ['layout h_tiles']
+after-startup-command = ['layout v_tiles']
 start-at-login = true 
 
 enable-normalization-flatten-containers = true
@@ -66,9 +66,21 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 1' 
+
+[[on-window-detected]]
 if.app-id = 'org.alacritty'
 run = 'move-node-to-workspace 2' 
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace 1' 
+if.app-id = 'com.apple.Music'
+run = 'move-node-to-workspace 3' 
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace 4' 
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace 4' 
