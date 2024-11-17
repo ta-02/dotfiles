@@ -20,6 +20,31 @@ local promptjobs="%{$fg[red]%}φ %{$reset_color%}"
 setopt prompt_subst
 PROMPT='${dir_info}$(git_prompt_info) %(1j.$promptjobs.$promptnormal)'
 
+bindkey -v 
+export KEYTIMEOUT=1
+
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[2 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[6 q'
+  fi
+}
+
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins 
+    echo -ne "\e[6 q"
+}
+
+zle -N zle-line-init
+echo -ne '\e[6 q' 
+preexec() { echo -ne '\e[6 q' ;} 
+
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
@@ -28,10 +53,8 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
-bindkey -v 
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
-
 
 alias vim="nvim"
 alias python="python3"
@@ -45,6 +68,7 @@ alias c++="c++ -std=c++23"
 
 export EDITOR="nvim"
 export VISUAL="nvim"
+export VI_MODE_SET_CURSOR=true
 
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

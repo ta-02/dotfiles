@@ -13,8 +13,8 @@ decorations = "none"
 [mouse]
 hide_when_typing = true
 
-[cursor]
-style.blinking = "On"
+# [cursor]
+# style.blinking = "On"
 
 [font]
 size = 31
