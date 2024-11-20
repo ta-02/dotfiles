@@ -8,9 +8,7 @@ return {
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
 		local mason_tool_installer = require("mason-tool-installer")
-
 		mason.setup()
-
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"ts_ls",
@@ -19,13 +17,11 @@ return {
 				"tailwindcss",
 				"lua_ls",
 				"emmet_ls",
-				"prismals",
 				"gopls",
 				"clangd",
 				"rust_analyzer",
 			},
 		})
-
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"prettier",
@@ -33,8 +29,6 @@ return {
 				"isort",
 				"black",
 				"clang-format",
-				"pylint",
-				"eslint_d",
 			},
 		})
 	end,

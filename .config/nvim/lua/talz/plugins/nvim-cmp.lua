@@ -11,15 +11,11 @@ return {
 		},
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
-		"onsails/lspkind.nvim",
 	},
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-		local lspkind = require("lspkind")
-
 		require("luasnip.loaders.from_vscode").lazy_load()
-
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
@@ -44,13 +40,6 @@ return {
 				{ name = "buffer" },
 				{ name = "path" },
 			}),
-			formatting = {
-				format = lspkind.cmp_format({
-					mode = "text_symbol",
-					maxwidth = 50,
-					-- ellipsis_char = "...",
-				}),
-			},
 		})
 	end,
 }

@@ -4,6 +4,18 @@ return {
 	config = function()
 		local conform = require("conform")
 		conform.setup({
+			formatters = {
+				prettier = {
+					command = "prettier",
+					args = { "--stdin-filepath", "$FILENAME", "--tab-width", "4" },
+					stdin = true,
+				},
+				["clang-format"] = {
+					command = "clang-format",
+					args = { "--assume-filename", "$FILENAME", "-style", "{IndentWidth: 4}" },
+					stdin = true,
+				},
+			},
 			formatters_by_ft = {
 				javascript = { "prettier" },
 				typescript = { "prettier" },

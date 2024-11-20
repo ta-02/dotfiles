@@ -11,7 +11,6 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap
-
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
@@ -57,16 +56,13 @@ return {
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
 			end,
 		})
-
 		local capabilities = cmp_nvim_lsp.default_capabilities()
-
 		mason_lspconfig.setup_handlers({
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
 				})
 			end,
-
 			["tailwindcss"] = function()
 				lspconfig["tailwindcss"].setup({
 					capabilities = capabilities,
@@ -82,7 +78,6 @@ return {
 					},
 				})
 			end,
-
 			["emmet_ls"] = function()
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
@@ -98,7 +93,6 @@ return {
 					},
 				})
 			end,
-
 			["lua_ls"] = function()
 				lspconfig["lua_ls"].setup({
 					capabilities = capabilities,
