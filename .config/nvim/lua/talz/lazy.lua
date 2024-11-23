@@ -1,16 +1,15 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
-if not vim.loop.fs_stat(lazypath) then
+if not vim.loop.fs_stat(vim.fn.stdpath("data") .. "/lazy/lazy.nvim") then
 	vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
-		lazypath,
+		vim.fn.stdpath("data") .. "/lazy/lazy.nvim",
 	})
 end
-vim.opt.rtp:prepend(lazypath)
+
+vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 require("lazy").setup({ { import = "talz.plugins" }, { import = "talz.plugins.lsp" } }, {
 	checker = {
 		enabled = true,

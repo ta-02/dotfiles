@@ -2,8 +2,7 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
-		local conform = require("conform")
-		conform.setup({
+		require("conform").setup({
 			formatters = {
 				prettier = {
 					command = "prettier",
@@ -26,7 +25,6 @@ return {
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
-				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				c = { "clang-format" },

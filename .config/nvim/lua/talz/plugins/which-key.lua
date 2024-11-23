@@ -1,7 +1,7 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
-	init = function()
+	config = function()
 		vim.o.timeout = true
 		require("which-key").setup({
 			icons = {
