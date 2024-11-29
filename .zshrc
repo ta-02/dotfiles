@@ -9,12 +9,7 @@ setopt hist_ignore_dups
 setopt hist_verify
 
 alias vim="nvim"
-alias python="python3"
-alias py="python3"
-alias pip="pip3"
 alias lg="lazygit"
-alias ls="eza"
-alias cd="z"
 alias g++="g++ -std=c++23"
 alias c++="c++ -std=c++23"
 
@@ -66,12 +61,6 @@ zle -N zle-line-init
 preexec() { echo -ne '\e[6 q'; }
 echo -ne '\e[6 q'
 
-function vi-yank-xclip {
-    zle vi-yank
-    echo "$CUTBUFFER" | pbcopy -i
-}
-zle -N vi-yank-xclip
-bindkey -M vicmd 'y' vi-yank-xclip
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
@@ -81,4 +70,3 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
 
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
