@@ -28,34 +28,34 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 git_prompt_info() {
-  local dirstatus=" OK"
-  local dirty="%{$fg[red]%} X%{$reset_color%}"
-  if [[ -n $(git status --porcelain 2> /dev/null | tail -n1) ]]; then
-    dirstatus=$dirty
-  fi
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
-  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
-  echo " %{$fg[green]%}${ref#refs/heads/}$dirstatus%{$reset_color%}"
-}
-local dir_info_color="%F{white}"
-local dir_info="%{$dir_info_color%}%(5~|%-1~/.../%2~|%4~)%{$reset_color%}"
-local promptnormal="$ %{$reset_color%}"
-local promptjobs="%{$fg[red]%}φ %{$reset_color%}"
-PROMPT='${dir_info}$(git_prompt_info) %(1j.$promptjobs.$promptnormal)'
+    local dirstatus=" OK"
+    local dirty="%{$fg[red]%} X%{$reset_color%}"
+    if [[ -n $(git status --porcelain 2> /dev/null | tail -n1) ]]; then
+        dirstatus=$dirty
+    fi
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+        ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+            echo " %{$fg[green]%}${ref#refs/heads/}$dirstatus%{$reset_color%}"
+        }
+        local dir_info_color="%F{white}"
+        local dir_info="%{$dir_info_color%}%(5~|%-1~/.../%2~|%4~)%{$reset_color%}"
+        local promptnormal="$ %{$reset_color%}"
+        local promptjobs="%{$fg[red]%}φ %{$reset_color%}"
+        PROMPT='${dir_info}$(git_prompt_info) %(1j.$promptjobs.$promptnormal)'
 
-bindkey -v
-export KEYTIMEOUT=1
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] || [[ $1 == 'block' ]]; then
-    echo -ne '\e[2 q'
-  elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ $1 == 'beam' ]]; then
-    echo -ne '\e[6 q'
-  fi
-}
-zle -N zle-keymap-select
-zle-line-init() {
-  zle -K viins
-  echo -ne "\e[6 q"
+        bindkey -v
+        export KEYTIMEOUT=1
+        function zle-keymap-select {
+        if [[ ${KEYMAP} == vicmd ]] || [[ $1 == 'block' ]]; then
+            echo -ne '\e[2 q'
+        elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ $1 == 'beam' ]]; then
+            echo -ne '\e[6 q'
+        fi
+    }
+    zle -N zle-keymap-select
+    zle-line-init() {
+    zle -K viins
+    echo -ne "\e[6 q"
 }
 zle -N zle-line-init
 preexec() { echo -ne '\e[6 q'; }

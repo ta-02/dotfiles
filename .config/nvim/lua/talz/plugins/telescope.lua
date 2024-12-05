@@ -37,6 +37,7 @@ return {
         vim.keymap.set("n", "<leader>k", function()
             require("telescope.builtin").buffers(require("telescope.themes").get_ivy({
                 sort_mru = true,
+                disable_devicons = true,
                 sort_lastused = true,
                 initial_mode = "normal",
                 layout_config = { preview_width = 0.4 },

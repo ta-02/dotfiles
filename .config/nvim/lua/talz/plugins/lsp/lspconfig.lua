@@ -1,11 +1,11 @@
 return {
-	"neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
     event = {"BufReadPre", "BufNewFile"},
-	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-		{"antosha417/nvim-lsp-file-operations", config = true},
-		{"folke/lazydev.nvim", config = true},
-	},
+    dependencies = {
+        "hrsh7th/cmp-nvim-lsp",
+        {"antosha417/nvim-lsp-file-operations", config = true},
+        {"folke/lazydev.nvim", config = true},
+    },
     config = function()
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),

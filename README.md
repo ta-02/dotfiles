@@ -4,7 +4,8 @@ dotfiles for
 
 - neovim
 - vscode
-- alacritty
+- kitty
+- karabiner
 - tmux
 - zsh
 - aerospace

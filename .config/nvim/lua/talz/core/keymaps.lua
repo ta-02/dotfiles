@@ -4,9 +4,9 @@ end, { expr = true, noremap = true })
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
-vim.keymap.set("n", "<leader>w", ":w<cr>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>q", ":bdelete<cr>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>Q", ":xa<cr>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>w", ":w<cr>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>q", ":bdelete<cr>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>Q", ":xa<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>")
 
