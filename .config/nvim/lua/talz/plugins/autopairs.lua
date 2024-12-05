@@ -1,6 +1,11 @@
 return {
     "windwp/nvim-autopairs",
-    dependencies = {"windwp/nvim-ts-autotag", config = true},
     event = "InsertEnter",
-    opts = {check_ts = true}
+    dependencies = "hrsh7th/nvim-cmp",
+    config = function()
+        require("nvim-autopairs").setup({
+            check_ts = true,
+        })
+        require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
+    end,
 }

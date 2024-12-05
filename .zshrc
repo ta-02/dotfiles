@@ -18,12 +18,15 @@ export VISUAL="nvim"
 export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --strip-cwd-prefix --exclude .git"
+
 export PATH="$HOME/.local/scripts:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
@@ -33,27 +36,28 @@ git_prompt_info() {
     if [[ -n $(git status --porcelain 2> /dev/null | tail -n1) ]]; then
         dirstatus=$dirty
     fi
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || \
-        ref=$(git rev-parse --short HEAD 2> /dev/null) || return
-            echo " %{$fg[green]%}${ref#refs/heads/}$dirstatus%{$reset_color%}"
-        }
-        local dir_info_color="%F{white}"
-        local dir_info="%{$dir_info_color%}%(5~|%-1~/.../%2~|%4~)%{$reset_color%}"
-        local promptnormal="$ %{$reset_color%}"
-        local promptjobs="%{$fg[red]%}φ %{$reset_color%}"
-        PROMPT='${dir_info}$(git_prompt_info) %(1j.$promptjobs.$promptnormal)'
+    local ref
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+    echo " %{$fg[green]%}${ref#refs/heads/}$dirstatus%{$reset_color%}"
+}
+dir_info_color="%F{white}"
+dir_info="%{$dir_info_color%}%(5~|%-1~/.../%2~|%4~)%{$reset_color%}"
+promptnormal="$ %{$reset_color%}"
+promptjobs="%{$fg[red]%}φ %{$reset_color%}"
+PROMPT="${dir_info}\$(git_prompt_info) %(1j.${promptjobs}.${promptnormal})"
 
-        bindkey -v
-        export KEYTIMEOUT=1
-        function zle-keymap-select {
-        if [[ ${KEYMAP} == vicmd ]] || [[ $1 == 'block' ]]; then
-            echo -ne '\e[2 q'
-        elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ $1 == 'beam' ]]; then
-            echo -ne '\e[6 q'
-        fi
-    }
-    zle -N zle-keymap-select
-    zle-line-init() {
+bindkey -v
+export KEYTIMEOUT=1
+
+function zle-keymap-select {
+    if [[ ${KEYMAP} == vicmd ]] || [[ $1 == 'block' ]]; then
+        echo -ne '\e[2 q'
+    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ $1 == 'beam' ]]; then
+        echo -ne '\e[6 q'
+    fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
     zle -K viins
     echo -ne "\e[6 q"
 }
