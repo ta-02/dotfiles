@@ -47,24 +47,6 @@ promptjobs="%{$fg[red]%}φ %{$reset_color%}"
 PROMPT="${dir_info}\$(git_prompt_info) %(1j.${promptjobs}.${promptnormal})"
 
 bindkey -v
-export KEYTIMEOUT=1
-
-function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] || [[ $1 == 'block' ]]; then
-        echo -ne '\e[2 q'
-    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ $1 == 'beam' ]]; then
-        echo -ne '\e[6 q'
-    fi
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins
-    echo -ne "\e[6 q"
-}
-zle -N zle-line-init
-preexec() { echo -ne '\e[6 q'; }
-echo -ne '\e[6 q'
-
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
